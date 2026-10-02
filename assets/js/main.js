@@ -25,25 +25,10 @@
   },{threshold:.12}) : null;
   $$(".reveal").forEach(function(el){ if(io) io.observe(el); else el.classList.add("in"); });
 
-  function toast(msg){
-    var t = $("#toast"); if(!t) return;
-    t.textContent = msg; t.classList.add("show");
-    clearTimeout(t._h); t._h = setTimeout(function(){ t.classList.remove("show"); }, 2600);
-  }
-
   // Downloads page: if no software cards have been added yet, show the empty notice.
   // To publish software later, just add .card elements inside #softwareList.
   var list = $("#softwareList"), empty = $("#emptyNotice");
   if(list && empty){
     empty.style.display = list.querySelector(".card") ? "none" : "block";
   }
-
-  // Contact / notify forms
-  $$("form[data-contact]").forEach(function(f){
-    f.addEventListener("submit", function(ev){
-      ev.preventDefault();
-      toast("Thank you. We will contact you soon.");
-      f.reset();
-    });
-  });
 })();

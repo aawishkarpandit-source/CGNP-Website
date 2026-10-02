@@ -1,0 +1,15 @@
+{
+  "name": "celta-group-digital",
+  "version": "1.0.0",
+  "description": "Celta Group Digital (CG.NP Digital) website — TSX without React + vanilla HTML/JS",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'Static site - no build step required.'",
+    "check": "tsc --noEmit",
+    "dev": "npx serve .",
+    "vercel-build": "echo 'Static site - no build step required.'"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,0 +1,3 @@
+Add your company logo here as logo.png (e.g. 256x256 PNG with transparent background).
+The website header, footer and browser tab will use it automatically.
+Current pages reference: assets/img/logo.png

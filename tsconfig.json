@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2020", "DOM"],
+    "jsx": "react",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "assets/js/compiled",
+    "rootDir": "src",
+    "declaration": false,
+    "sourceMap": false,
+    "esModuleInterop": true,
+    "types": []
+  },
+  "include": ["src/**/*"]
+}

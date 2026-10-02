@@ -31,4 +31,21 @@
   if(list && empty){
     empty.style.display = list.querySelector(".card") ? "none" : "block";
   }
+
+  // Coach Dashboard: always point at the newest GitHub release .exe.
+  // Falls back to the pinned link in download.html if the API is unreachable.
+  try{
+    var dl = $("#coachDl"), ver = $("#coachVer"), fsize = $("#coachSize");
+    if(dl && typeof fetch === "function"){
+      fetch("https://api.github.com/repos/aawishkarpandit-source/coach-dashboard/releases/latest").then(function(r){
+        if(!r.ok) throw 0; return r.json();
+      }).then(function(rel){
+        var exe = (rel.assets||[]).filter(function(a){ return /\.exe$/i.test(a.name); })[0];
+        if(!exe) return;
+        dl.href = exe.browser_download_url;
+        if(ver && rel.tag_name) ver.textContent = rel.tag_name;
+        if(fsize && exe.size) fsize.textContent = "~" + (exe.size/1048576).toFixed(1) + " MB";
+      }).catch(function(){});
+    }
+  }catch(e){}
 })();

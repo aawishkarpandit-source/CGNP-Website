@@ -121,6 +121,9 @@ tr:nth-child(even) td{background:#f8fafc}
 .empty .big{font-size:52px}
 .software-grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
 @media(max-width:860px){.software-grid{grid-template-columns:1fr}}
+.dl-meta{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;font-size:12.5px;color:var(--muted)}
+.pill{border:1px solid var(--line);background:var(--light);padding:4px 11px;border-radius:999px;font-weight:600}
+.dl-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
 /* Example future software card (hidden until you add software)
 .sw-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
 */

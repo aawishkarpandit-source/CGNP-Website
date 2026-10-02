@@ -32,8 +32,8 @@
     empty.style.display = list.querySelector(".card") ? "none" : "block";
   }
 
-  // Coach Dashboard: always point at the newest GitHub release .exe.
-  // Falls back to the pinned link in download.html if the API is unreachable.
+  // Coach Dashboard: resolve the newest GitHub release .exe via the API.
+  // No pinned file — the button links to the releases page until the API answers.
   try{
     var dl = $("#coachDl"), ver = $("#coachVer"), fsize = $("#coachSize");
     if(dl && typeof fetch === "function"){
@@ -41,11 +41,16 @@
         if(!r.ok) throw 0; return r.json();
       }).then(function(rel){
         var exe = (rel.assets||[]).filter(function(a){ return /\.exe$/i.test(a.name); })[0];
-        if(!exe) return;
+        if(!exe) throw 0;
         dl.href = exe.browser_download_url;
+        dl.textContent = "Download for Windows ↓";
         if(ver && rel.tag_name) ver.textContent = rel.tag_name;
         if(fsize && exe.size) fsize.textContent = "~" + (exe.size/1048576).toFixed(1) + " MB";
-      }).catch(function(){});
+      }).catch(function(){
+        dl.textContent = "See all versions";
+      });
+    } else {
+      dl.textContent = "See all versions";
     }
   }catch(e){}
 })();

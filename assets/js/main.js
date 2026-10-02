@@ -32,7 +32,7 @@
     empty.style.display = list.querySelector(".card") ? "none" : "block";
   }
 
-  // Coach Dashboard: pinned to v1.0.8 in download.html; the API upgrades
+  // Coach Dashboard: pinned to v1.0.9 in download.html; the API upgrades
   // the button automatically when a newer release ships.
   try{
     var dl = $("#coachDl"), ver = $("#coachVer"), fsize = $("#coachSize");

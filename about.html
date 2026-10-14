@@ -9,22 +9,19 @@
   <meta property="og:site_name" content="VELTRION">
   <meta property="og:title" content="About Us — VELTRION">
   <meta property="og:description" content="Learn about VELTRION: our vision, team and how we help businesses.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/img/logo.png" type="image/png">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="topbar"><div class="container topbar-inner">
-  <span><b>VELTRION</b> · Engineered for What's Next.</span><span>About our company</span>
-</div></div>
 <nav class="nav"><div class="container nav-inner">
   <a class="brand" href="index.html">
     <span class="logo-box"><img src="assets/img/logo.png" alt="VELTRION logo" onerror="this.remove()">LOGO</span>
-    <span class="brand-text"><b>VELTRION</b><span>Engineered for What's Next.</span></span>
+    <span class="brand-text"><b>VELTRION</b></span>
   </a>
   <div class="links" id="navLinks"><a href="index.html">Home</a><a href="about.html" class="active">About Us</a><a href="download.html">Downloads</a></div>
-  <div style="display:flex;gap:8px;align-items:center"><a class="btn btn-primary btn-sm nav-cta" href="download.html">Downloads</a><button class="hamburger" id="hamburger">☰</button></div>
+  <div style="display:flex;gap:8px;align-items:center"><a class="btn btn-primary btn-sm nav-cta" href="download.html">Downloads</a><button class="hamburger" id="hamburger" aria-label="Menu">☰</button></div>
 </div></nav>
 
 <main id="main">
@@ -45,17 +42,17 @@
 
 <section class="section-light" id="team"><div class="container">
   <div class="sec-head reveal"><div class="kicker">Meet the team</div><h2>People behind VELTRION</h2>
-  <p>Clear roles, so you always know who is looking after your project.</p></div></div>
+  <p>Clear roles, so you always know who is looking after your project.</p></div>
   <div class="grid g3">
-    <div class="card reveal"><div class="person"><div class="avatar">AP</div><div><b>Awishkar Pandit</b><div class="role">Chairman & Lead Developer</div></div></div><p style="margin-top:10px">Leads the company and oversees all software development and quality.</p></div>
-    <div class="card reveal"><div class="person"><div class="avatar a2">AB</div><div><b>Abhinav Basnet</b><div class="role">Lead Marketing Agent</div></div></div><p style="margin-top:10px">Looks after marketing, promotion and bringing new clients.</p></div>
-    <div class="card reveal"><div class="person"><div class="avatar a3">SB</div><div><b>Sakshyam Basnet</b><div class="role">Lead Creative Designer</div></div></div><p style="margin-top:10px">Handles branding, graphics and creative design work.</p></div>
-    <div class="card reveal"><div class="person"><div class="avatar a4">PS</div><div><b>Pranjal Sharma</b><div class="role">Business Manager</div></div></div><p style="margin-top:10px">Manages daily operations, clients and project delivery.</p></div>
-    <div class="card reveal"><div class="person"><div class="avatar a5">LB</div><div><b>Laxmi Bhandari</b><div class="role">Legal Advisor</div></div></div><p style="margin-top:10px">Provides legal guidance and ensures proper business practice.</p></div>
-    <div class="card reveal"><div class="icon">🏢</div><h3>How we are organized</h3><p>Chairman leads the company. Marketing, Design and Business teams handle daily work. Legal Advisor guides independently.</p></div>
+    <div class="item reveal"><div class="person"><div class="avatar">AP</div><div><b>Awishkar Pandit</b><div class="role">Chairman & Lead Developer</div></div></div><p>Leads the company and oversees all software development and quality.</p></div>
+    <div class="item reveal"><div class="person"><div class="avatar">AB</div><div><b>Abhinav Basnet</b><div class="role">Lead Marketing Agent</div></div></div><p>Looks after marketing, promotion and bringing new clients.</p></div>
+    <div class="item reveal"><div class="person"><div class="avatar">SB</div><div><b>Sakshyam Basnet</b><div class="role">Lead Creative Designer</div></div></div><p>Handles branding, graphics and creative design work.</p></div>
+    <div class="item reveal"><div class="person"><div class="avatar">PS</div><div><b>Pranjal Sharma</b><div class="role">Business Manager</div></div></div><p>Manages daily operations, clients and project delivery.</p></div>
+    <div class="item reveal"><div class="person"><div class="avatar">LB</div><div><b>Laxmi Bhandari</b><div class="role">Legal Advisor</div></div></div><p>Provides legal guidance and ensures proper business practice.</p></div>
+    <div class="item reveal"><h3>How we are organized</h3><p>Chairman leads the company. Marketing, Design and Business teams handle daily work. Legal Advisor guides independently.</p></div>
   </div>
 
-  <div class="panel reveal" style="margin-top:18px">
+  <div class="panel reveal" style="margin-top:26px">
     <h3 style="margin:0 0 10px;color:var(--ink)">Company at a glance</h3>
     <div style="overflow:auto"><table>
       <tr><th>Topic</th><th>Details</th></tr>
@@ -71,10 +68,16 @@
 </main>
 
 <footer><div class="container foot">
-  <div><b style="color:#fff">VELTRION</b><p>Engineered for What's Next. Software & Digital Technology.</p></div>
-  <div><h4>Pages</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="download.html">Downloads</a></div>
-  <div><h4>Company</h4><a href="#team">Our Team</a><a href="download.html">Downloads</a></div>
-  <div><h4>More</h4><a href="download.html">Software</a><a href="index.html">Services</a></div>
+  <div class="foot-brand"><b style="color:#fff">VELTRION</b></div>
+  <p>Software & Digital Technology.</p>
+  <nav class="foot-links" aria-label="Footer">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="download.html">Downloads</a>
+    <a href="#team">Our Team</a>
+    <a href="download.html">Software</a>
+    <a href="index.html">Services</a>
+  </nav>
 </div>
 <div class="copy container"><span>© <span data-year>2026</span> VELTRION.</span><span>Engineered for What's Next.</span></div></footer>
 <script src="assets/js/main.js" defer></script>

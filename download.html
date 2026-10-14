@@ -9,22 +9,19 @@
   <meta property="og:site_name" content="VELTRION">
   <meta property="og:title" content="Downloads — VELTRION">
   <meta property="og:description" content="Download official software from VELTRION.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/img/logo.png" type="image/png">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="topbar"><div class="container topbar-inner">
-  <span><b>VELTRION</b> · Engineered for What's Next.</span><span>Official software downloads</span>
-</div></div>
 <nav class="nav"><div class="container nav-inner">
   <a class="brand" href="index.html">
     <span class="logo-box"><img src="assets/img/logo.png" alt="VELTRION logo" onerror="this.remove()">LOGO</span>
-    <span class="brand-text"><b>VELTRION</b><span>Engineered for What's Next.</span></span>
+    <span class="brand-text"><b>VELTRION</b></span>
   </a>
   <div class="links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="download.html" class="active">Downloads</a></div>
-  <div style="display:flex;gap:8px;align-items:center"><a class="btn btn-primary btn-sm nav-cta" href="about.html">About Us</a><button class="hamburger" id="hamburger">☰</button></div>
+  <div style="display:flex;gap:8px;align-items:center"><a class="btn btn-primary btn-sm nav-cta" href="about.html">About Us</a><button class="hamburger" id="hamburger" aria-label="Menu">☰</button></div>
 </div></nav>
 
 <main id="main">
@@ -38,7 +35,6 @@
   <!-- To add more software later, copy the .card block below inside #softwareList. -->
   <div id="softwareList" class="software-grid">
     <div class="card">
-      <div class="icon">🖥️</div>
       <h3>Coach Dashboard</h3>
       <p>Classroom software — teacher control window and student screen in one install.</p>
       <div class="dl-meta"><span class="pill" id="coachVer">v1.0.9</span><span class="pill">Windows</span><span class="pill" id="coachSize">~79.6 MB</span></div>
@@ -50,8 +46,7 @@
   </div>
 
   <div class="empty reveal" id="emptyNotice">
-    <div class="big">📦</div>
-    <h2 style="color:var(--ink);margin:10px 0 6px">No software available yet</h2>
+    <h2 style="color:var(--ink);margin:0 0 6px">No software available yet</h2>
     <p style="max-width:52ch;margin:0 auto">We are preparing our first releases. Please check back soon — new software will appear here automatically once published.</p>
     <div style="margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
       <a class="btn btn-dark" href="about.html">Learn About Us</a>
@@ -59,22 +54,28 @@
     </div>
   </div>
 
-  <div class="panel" style="margin-top:18px">
+  <div class="panel" style="margin-top:26px">
     <h3 style="margin:0 0 8px;color:var(--ink)">A note for customers</h3>
     <ul class="list">
-      <li><span class="tick">✓</span><span>All files here are official and safe. Avoid downloading our software from other sites.</span></li>
-      <li><span class="tick">✓</span><span>Each release will show version, size and simple installation steps.</span></li>
-      <li><span class="tick">✓</span><span>New versions will be announced here when published.</span></li>
+      <li>All files here are official and safe. Avoid downloading our software from other sites.</li>
+      <li>Each release will show version, size and simple installation steps.</li>
+      <li>New versions will be announced here when published.</li>
     </ul>
   </div>
 </div></section>
 </main>
 
 <footer><div class="container foot">
-  <div><b style="color:#fff">VELTRION</b><p>Engineered for What's Next. Software & Digital Technology.</p></div>
-  <div><h4>Pages</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="download.html">Downloads</a></div>
-  <div><h4>Company</h4><a href="about.html#team">Our Team</a><a href="download.html">Software</a></div>
-  <div><h4>More</h4><a href="index.html">Services</a><a href="about.html">About Us</a></div>
+  <div class="foot-brand"><b style="color:#fff">VELTRION</b></div>
+  <p>Software & Digital Technology.</p>
+  <nav class="foot-links" aria-label="Footer">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="download.html">Downloads</a>
+    <a href="about.html#team">Our Team</a>
+    <a href="download.html">Software</a>
+    <a href="index.html">Services</a>
+  </nav>
 </div>
 <div class="copy container"><span>© <span data-year>2026</span> VELTRION.</span><span>Engineered for What's Next.</span></div></footer>
 <script src="assets/js/main.js" defer></script>

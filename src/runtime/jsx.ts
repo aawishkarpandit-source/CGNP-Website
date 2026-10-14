@@ -1,5 +1,5 @@
 /**
- * CG.NP Digital — minimal JSX runtime (NO React).
+ * VELTRION — minimal JSX runtime (NO React).
  * Usage in .tsx files:
  *   /** @jsx h *\/
  *   import { h, Fragment } from "../runtime/jsx";

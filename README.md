@@ -1,6 +1,6 @@
-# Celta Group Digital (CG.NP Digital) — Website
+# VELTRION — Website
 
-Software & Digital Technology · `index.html` / `about.html` / `download.html`
+Engineered for What's Next. · `index.html` / `about.html` / `download.html`
 TSX **without React** + vanilla HTML/CSS/JS.
 
 ## Run (no build needed)
@@ -12,7 +12,7 @@ Sources in `src/` use a tiny `h()` JSX runtime (`src/runtime/jsx.ts`):
 ```tsx
 /** @jsx h */
 import { h } from "../runtime/jsx";
-export function Card() { return <div class="card">Hello CG</div>; }
+export function Card() { return <div class="card">Hello VELTRION</div>; }
 ```
 
 ```bash

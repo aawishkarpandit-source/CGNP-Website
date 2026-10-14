@@ -29,8 +29,8 @@ export function Navbar(active: "home" | "about" | "download") {
   return (
     <nav class="nav"><div class="container nav-inner">
       <a class="brand" href="index.html">
-        <span class="logo-box"><img src="assets/img/logo.png" alt="Company logo" />LOGO</span>
-        <span class="brand-text"><b>Celta Group Digital</b><span>CG.NP Digital</span></span>
+        <span class="logo-box"><img src="assets/img/logo.png" alt="VELTRION logo" />LOGO</span>
+        <span class="brand-text"><b>VELTRION</b><span>Engineered for What's Next.</span></span>
       </a>
       <div class="links" id="navLinks">
         {link("index.html", "Home", "home")}

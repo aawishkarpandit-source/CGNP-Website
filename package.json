@@ -1,7 +1,7 @@
 {
-  "name": "celta-group-digital",
+  "name": "veltrion-website",
   "version": "1.0.0",
-  "description": "Celta Group Digital (CG.NP Digital) website — TSX without React + vanilla HTML/JS",
+  "description": "VELTRION website — TSX without React + vanilla HTML/JS",
   "type": "module",
   "scripts": {
     "build": "echo 'Static site - no build step required.'",

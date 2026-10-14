@@ -1,4 +1,4 @@
-// Celta Group Digital — simple business site JS (no frameworks)
+// VELTRION — simple business site JS (no frameworks)
 (function(){
   "use strict";
   function $(s,c){ return (c||document).querySelector(s); }

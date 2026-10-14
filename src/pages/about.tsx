@@ -8,7 +8,7 @@ export function AboutPage() {
     <fragment>
       {Navbar("about")}
       <main>
-        <h1>About Celta Group Digital</h1>
+        <h1>About VELTRION</h1>
         <div class="grid g3">{LEADERS.map(TeamCard)}</div>
       </main>
     </fragment>

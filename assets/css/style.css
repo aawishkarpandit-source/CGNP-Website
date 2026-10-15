@@ -218,12 +218,13 @@ main{position:relative;z-index:2}
 .to-top.show{opacity:1;visibility:visible;transform:scale(1)}
 .to-top:hover{transform:scale(1.05)}
 
-/* Section side-nav (home) */
+/* Section side-nav (home) — shown only where the right gutter is wide
+   enough that it never overlaps the container (1440px+). */
 .section-nav{
   position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:40;
   display:none;flex-direction:column;gap:16px;
 }
-@media(min-width:1280px){.section-nav{display:flex}}
+@media(min-width:1440px){.section-nav{display:flex}}
 .section-nav a{display:flex;align-items:center;gap:12px;opacity:.45;transition:opacity .3s var(--ease),transform .3s var(--ease)}
 .section-nav a:hover{opacity:1;transform:translateX(-6px)}
 .section-nav a.active{opacity:1}
@@ -311,6 +312,8 @@ main{position:relative;z-index:2}
 
 /* ---------- Section shell ---------- */
 .section{position:relative;border-top:1px solid var(--line)}
+/* Anchor targets clear the sticky header (inner pages) */
+section[id]{scroll-margin-top:96px}
 .section-head{padding-top:80px;padding-bottom:48px}
 @media(min-width:640px){.section-head{padding-top:96px;padding-bottom:56px}}
 .section-head h2{
@@ -592,3 +595,29 @@ footer{border-top:1px solid var(--line);background:var(--black)}
   .hero-head,.hero-label,.logo-orb,.hero h1,.hero-tagline,.hero-sub{animation:none!important}
   *{transition-duration:.01ms!important}
 }
+
+/* ---------- Boot fallback (no JS / render failed) ----------
+   The shells add html.js when scripting is available; the inline watchdog
+   removes it if the page module never rendered. So this block is visible
+   exactly when the full page could not be built. */
+.boot-fallback{
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:16px;padding:48px 24px;text-align:center;
+}
+html.js .boot-fallback{display:none}
+.boot-fallback .boot-eyebrow{
+  font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--emerald);
+}
+.boot-fallback h1{
+  font-family:var(--display);font-size:clamp(2.5rem,8vw,5rem);line-height:.95;
+  text-transform:uppercase;color:#fff;
+}
+.boot-fallback .boot-tag{color:var(--t-500);font-size:14px;max-width:44ch}
+.boot-fallback .boot-nav{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+.boot-fallback .boot-nav a{
+  border:1px solid var(--line-3);border-radius:var(--pill);padding:10px 20px;
+  font-size:12px;font-weight:600;letter-spacing:.05em;color:var(--t-100);
+  transition:border-color .25s var(--ease),color .25s var(--ease);
+}
+.boot-fallback .boot-nav a:hover{border-color:var(--emerald);color:#fff}
+.boot-fallback .boot-note{color:var(--t-500);font-size:12px;max-width:52ch}

@@ -4,10 +4,10 @@
   "description": "VELTRION website — TSX without React + vanilla HTML/JS",
   "type": "module",
   "scripts": {
-    "build": "echo 'Static site - no build step required.'",
+    "build": "tsc",
     "check": "tsc --noEmit",
     "dev": "npx serve .",
-    "vercel-build": "echo 'Static site - no build step required.'"
+    "vercel-build": "tsc"
   },
   "devDependencies": {
     "typescript": "^5.6.0"

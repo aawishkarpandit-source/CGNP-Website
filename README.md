@@ -1,37 +1,51 @@
 # VELTRION — Website
 
 Engineered for What's Next. · `index.html` / `about.html` / `download.html`
-TSX **without React** + vanilla HTML/CSS/JS.
 
-## Run (no build needed)
-Just open `index.html` in a browser. No dependencies.
+The pages are driven by **TSX without React** — a tiny `h()` JSX runtime compiles
+`src/` to ES modules in `assets/js/compiled/`, and each HTML file is a thin shell
+that mounts its page into `#app`.
 
-## Develop with TSX (no React)
-Sources in `src/` use a tiny `h()` JSX runtime (`src/runtime/jsx.ts`):
-
-```tsx
-/** @jsx h */
-import { h } from "../runtime/jsx";
-export function Card() { return <div class="card">Hello VELTRION</div>; }
-```
+## Run
 
 ```bash
 npm install
-npm run check   # typecheck tsx
-npm run build   # emit to assets/js/compiled
+npm run build   # tsc → assets/js/compiled/
+npm run dev     # serve locally
 ```
 
-`assets/js/main.js` is the hand-compiled vanilla output already wired to all 3 HTML pages,
-so the site works even without running `tsc`.
+Then open the served site. `npm run check` typechecks the TSX.
 
-## Structure
+## How it fits together
+
 ```
-index.html about.html download.html
-assets/css/style.css  assets/js/main.js
-src/runtime/jsx.ts
-src/components/Layout.tsx  src/components/Services.tsx
-src/pages/home.tsx  src/pages/about.tsx  src/pages/download.tsx
+index.html about.html download.html     ← thin shells: head/meta + #app + fallback + module script
+assets/css/style.css                     ← design system (27 tokens, no framework)
+src/runtime/jsx.ts                       ← h()/render() — plain DOM, no React
+src/runtime/behaviors.ts                 ← nav, reveal, accordion, rail, downloads wiring
+src/runtime/boot.ts                      ← render + fail-safe (never a blank screen)
+src/data/site.ts                         ← all copy/content (single source of truth)
+src/components/Layout.tsx  Icons.tsx     ← header, footer, effects, rail, SVG icons
+src/pages/home.tsx  about.tsx  download.tsx
 ```
 
-## Company data baked in
-- Vision / Mission, 10 services, 5 leaders, 35/22/22/21 share chart, hierarchy, estimator + 5 instant downloads.
+### Editing content
+
+- **Copy/sections** → `src/data/site.ts` (services, FAQ, team, downloads…)
+- **Page markup** → `src/pages/*.tsx`
+- **Behavior** → `src/runtime/behaviors.ts`
+- **Styles** → `assets/css/style.css`
+
+After any `src/` change run `npm run build` (or `npm run check` to only typecheck).
+
+### Degradation
+
+Each shell has an inline watchdog + `.boot-fallback`: if the module never renders
+(JS disabled or an error), `html.js` is dropped and a branded fallback with nav
+links appears — the site can degrade, but it never stays blank.
+
+## Deploy notes
+
+- `vercel-build` runs `tsc`, so `assets/js/compiled/` is generated on every deploy.
+- All responses ship `Cache-Control: public, max-age=0, must-revalidate`, so a new
+  deploy is picked up immediately (no more stale-cache blank pages).

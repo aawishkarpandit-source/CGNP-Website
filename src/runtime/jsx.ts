@@ -13,7 +13,24 @@ export function Fragment(props: Props): any {
   return props.children ?? [];
 }
 
-function setAttr(el: HTMLElement, key: string, value: any): void {
+// --- SVG support -------------------------------------------------------
+// document.createElement("svg") produces an HTML-namespace element that
+// browsers do NOT render; SVG content must be created with createElementNS.
+const SVG_NS = "http://www.w3.org/2000/svg";
+const SVG_TAGS: Record<string, true> = {
+  svg: true, path: true, g: true, circle: true, rect: true, line: true,
+  polyline: true, polygon: true, ellipse: true, text: true, tspan: true,
+  defs: true, use: true, mask: true, clipPath: true, linearGradient: true,
+  radialGradient: true, stop: true,
+};
+
+function createEl(tag: string): Element {
+  return SVG_TAGS[tag]
+    ? document.createElementNS(SVG_NS, tag)
+    : document.createElement(tag);
+}
+
+function setAttr(el: Element, key: string, value: any): void {
   if (value == null || value === false) return;
   if (key === "class" || key === "className") { el.setAttribute("class", String(value)); return; }
   if (key === "htmlFor") { el.setAttribute("for", String(value)); return; }
@@ -40,7 +57,7 @@ export function h(tag: string | Function, props?: Props, ...children: any[]): HT
     flat.forEach((c) => frag.append(c instanceof Node ? c : document.createTextNode(String(c))));
     return frag;
   }
-  const el = document.createElement(tag as string);
+  const el = createEl(tag as string);
   const p = props || {};
   Object.keys(p).forEach((k) => { if (k !== "children") setAttr(el, k, p[k]); });
   // allow children passed via props.children too

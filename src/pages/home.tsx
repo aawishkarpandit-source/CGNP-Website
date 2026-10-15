@@ -65,8 +65,7 @@ function HeroSection() {
         </div>
         <h1>VELTRION</h1>
         <p class="hero-tagline">
-          We build professional websites, custom software and complete business management systems —
-          plus design, marketing and ongoing support. Simple process, clear pricing, reliable service.
+          We build professional websites, custom software and complete business management systems plus design, marketing and ongoing support. Simple process, clear pricing, reliable service.
         </p>
         <p class="hero-sub">{"Software & Digital Technology · For shops, offices & organizations"}</p>
       </div>
@@ -139,7 +138,7 @@ function EditorialSection() {
             <h2 class="second">We remove them.</h2>
           </div>
           <p class="lead">
-            Clear scope, regular updates and hands-on training — practical digital products that are
+            Clear scope, regular updates and hands-on training practical digital products that are
             easy to use and dependable for modern organizations.
           </p>
         </div>
@@ -247,7 +246,7 @@ function CtaSection() {
               <p class="eyebrow-sm">( Get started )</p>
               <h2>Engineered for What's Next.</h2>
               <p>
-                Websites, software or a complete management system — tell us what your business needs
+                Websites, software or a complete management system tell us what your business needs
                 and we shape a clear plan from there.
               </p>
               <a class="btn-cta" href="download.html">View Downloads</a>
@@ -265,7 +264,7 @@ function CtaSection() {
                 ))}
               </ul>
               <p class="cta-note">
-                All software is published officially on our <b>Downloads</b> page — safe files,
+                All software is published officially on our <b>Downloads</b> page. Safe files,
                 version and size listed for every release.
               </p>
             </div>

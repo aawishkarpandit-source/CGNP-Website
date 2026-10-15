@@ -12,7 +12,7 @@ function PageHero() {
         <h1>A company that understands business.</h1>
         <p class="lead">
           <b>VELTRION</b> is a technology company. We provide websites, software and digital services
-          for businesses, organizations and individuals — practical solutions that are easy to use and
+          for businesses, organizations and individuals practical solutions that are easy to use and
           dependable.
         </p>
       </div>

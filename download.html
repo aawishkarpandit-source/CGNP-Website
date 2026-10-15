@@ -12,73 +12,147 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/img/logo.png" type="image/png">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<nav class="nav"><div class="container nav-inner">
-  <a class="brand" href="index.html">
-    <span class="logo-box"><img src="assets/img/logo.png" alt="VELTRION logo" onerror="this.remove()">LOGO</span>
-    <span class="brand-text"><b>VELTRION</b></span>
-  </a>
-  <div class="links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="download.html" class="active">Downloads</a></div>
-  <div style="display:flex;gap:10px;align-items:center">
-    <a class="nav-cta" href="download.html">Downloads</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
-  </div>
-</div></nav>
 
-<main id="main">
-<header class="hero"><div class="container">
-  <span class="eyebrow">Downloads</span>
-  <h1>Our <span>software downloads.</span></h1>
-  <p class="lead">All official software from VELTRION will be published here. Please only download from this page to stay safe.</p>
-</div></header>
+<!-- Page effects -->
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="ambient" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+<div class="spotlight" id="spotlight" aria-hidden="true"></div>
 
-<section><div class="container">
-  <!-- To add more software later, copy the .card block below inside #softwareList. -->
-  <div id="softwareList" class="software-grid">
-    <div class="card">
-      <h3>Coach Dashboard</h3>
-      <p>Classroom software — teacher control window and student screen in one install.</p>
-      <div class="dl-meta"><span class="pill" id="coachVer">v1.0.9</span><span class="pill">Windows</span><span class="pill" id="coachSize">~79.6 MB</span></div>
-      <div class="dl-actions">
-        <a class="btn btn-primary btn-sm" id="coachDl" href="https://github.com/aawishkarpandit-source/coach-dashboard/releases/download/v1.0.9/Coach-Dashboard-Setup-1.0.9.exe">Download for Windows ↓</a>
-        <a class="btn btn-sm" href="https://github.com/aawishkarpandit-source/coach-dashboard/releases">All versions</a>
-      </div>
+<!-- Sticky header -->
+<header class="site-header">
+  <div class="site-container">
+    <a class="brand" href="index.html" aria-label="VELTRION home">
+      <span class="logo-chip"><img src="assets/img/logo.png" alt="" onerror="this.remove()">LOGO</span>
+      <span class="brand-name">VELTRION</span>
+    </a>
+    <nav class="mainnav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="download.html">Downloads</a>
+    </nav>
+    <div class="head-actions">
+      <a class="nav-pill" href="download.html">Downloads</a>
+      <button class="menu-btn" id="hamburger" aria-expanded="false" aria-controls="navMenu">Menu</button>
     </div>
   </div>
-
-  <div class="empty" id="emptyNotice">
-    <h2>No software available yet</h2>
-    <p style="max-width:52ch;margin:14px auto 0">We are preparing our first releases. Please check back soon — new software will appear here automatically once published.</p>
-    <div style="margin-top:22px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-      <a class="btn btn-dark" href="about.html">Learn About Us</a>
-      <a class="btn" href="index.html">Back to Home</a>
-    </div>
-  </div>
-
-  <div class="panel" style="margin-top:34px">
-    <h3>A note for customers</h3>
-    <ul class="list">
-      <li>All files here are official and safe. Avoid downloading our software from other sites.</li>
-      <li>Each release will show version, size and simple installation steps.</li>
-      <li>New versions will be announced here when published.</li>
+  <div class="mobile-menu" id="navMenu" hidden>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="download.html">Downloads</a></li>
     </ul>
   </div>
-</div></section>
+</header>
+
+<main id="main">
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="site-container">
+      <p class="eyebrow-sm">Downloads</p>
+      <h1>Our software downloads.</h1>
+      <p class="lead">All official software from VELTRION will be published here. Please only download from this page to stay safe.</p>
+    </div>
+  </section>
+
+  <!-- SOFTWARE -->
+  <section class="section" id="software">
+    <div class="site-container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Official releases</p>
+        <h2>Software</h2>
+        <p>New versions appear on this page automatically once published.</p>
+      </div>
+      <div class="section-body">
+        <!-- To add more software later, copy the .card block below inside #softwareList. -->
+        <div id="softwareList" class="grid-hairline cols-3" data-stagger>
+          <article class="cell card col-span-2" data-reveal>
+            <div class="cell-top">
+              <span class="cell-num">01</span>
+              <span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <h3>Coach Dashboard</h3>
+            <p>Classroom software — teacher control window and student screen in one install.</p>
+            <div class="dl-meta">
+              <span class="tag" id="coachVer">v1.0.9</span>
+              <span class="tag">Windows</span>
+              <span class="tag" id="coachSize">~79.6 MB</span>
+            </div>
+            <div class="dl-actions">
+              <a class="btn btn-primary btn-sm" id="coachDl" href="https://github.com/aawishkarpandit-source/coach-dashboard/releases/download/v1.0.9/Coach-Dashboard-Setup-1.0.9.exe">Download for Windows
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>
+              </a>
+              <a class="btn btn-outline btn-sm" href="https://github.com/aawishkarpandit-source/coach-dashboard/releases">All versions</a>
+            </div>
+          </article>
+          <article class="cell" data-reveal>
+            <h3 style="margin-top:0">A note for customers</h3>
+            <ul class="list" style="margin-top:24px">
+              <li>All files here are official and safe. Avoid downloading our software from other sites.</li>
+              <li>Each release will show version, size and simple installation steps.</li>
+              <li>New versions will be announced here when published.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="empty" id="emptyNotice">
+          <h2>No software available yet</h2>
+          <p>We are preparing our first releases. Please check back soon — new software will appear here automatically once published.</p>
+          <div class="actions">
+            <a class="btn btn-light" href="about.html">Learn About Us</a>
+            <a class="btn btn-outline" href="index.html">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer><div class="container foot">
-  <div class="foot-brand"><b>VELTRION</b></div>
-  <p>Software & Digital Technology.</p>
-  <nav class="foot-links" aria-label="Footer">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="download.html">Downloads</a>
-    <a href="about.html#team">Our Team</a>
-  </nav>
-</div>
-<div class="copy container"><span>© <span data-year>2026</span> VELTRION.</span><span>Engineered for What's Next.</span></div></footer>
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+</button>
+
+<footer>
+  <div class="site-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-chip"><img src="assets/img/logo.png" alt="" onerror="this.remove()">LOGO</span>
+        <p class="name">VELTRION</p>
+        <p>Engineered for What's Next. Websites, software, business systems, design, marketing and support.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="download.html">Downloads</a></li>
+          <li><a href="about.html#team">Our Team</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li>Business Websites</li>
+          <li>Custom Software</li>
+          <li>Web Applications</li>
+          <li>Records &amp; Database</li>
+          <li>Business Management Systems</li>
+          <li>Design &amp; Branding</li>
+          <li>Marketing &amp; Promotion</li>
+          <li>Support &amp; Hosting</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year>2026</span> VELTRION. Software &amp; Digital Technology.</p>
+      <p><span class="sep">·</span> Engineered for What's Next.</p>
+    </div>
+  </div>
+</footer>
+
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>

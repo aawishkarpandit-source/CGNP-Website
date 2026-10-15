@@ -13,98 +13,434 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/img/logo.png" type="image/png">
+  <script>document.documentElement.classList.add("js");</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"VELTRION","slogan":"Engineered for What's Next.","description":"VELTRION provides websites, software and digital services for businesses, organizations and individuals.","serviceType":["Business Websites","Custom Software","Web Applications","Records & Database","Business Management Systems","Design & Branding","Marketing & Promotion","Support & Hosting"]}
+  </script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<nav class="nav"><div class="container nav-inner">
-  <a class="brand" href="index.html">
-    <span class="logo-box"><img src="assets/img/logo.png" alt="VELTRION logo" onerror="this.remove()">LOGO</span>
-    <span class="brand-text"><b>VELTRION</b></span>
-  </a>
-  <div class="links" id="navLinks">
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="download.html">Downloads</a>
+
+<!-- Page effects -->
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="ambient" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+<div class="spotlight" id="spotlight" aria-hidden="true"></div>
+
+<!-- Hero header (fades on scroll, as in the reference) -->
+<header class="hero-head">
+  <div class="site-container">
+    <a class="brand" href="index.html" aria-label="VELTRION home">
+      <span class="logo-chip"><img src="assets/img/logo.png" alt="" onerror="this.remove()">LOGO</span>
+      <span class="brand-name">VELTRION</span>
+    </a>
+    <nav class="mainnav hero-nav" aria-label="Main">
+      <a href="about.html">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="download.html">Downloads</a>
+    </nav>
+    <div class="head-actions">
+      <a class="nav-pill" href="download.html">Downloads</a>
+      <button class="menu-btn" id="hamburger" aria-expanded="false" aria-controls="navMenu">Menu</button>
+    </div>
   </div>
-  <div style="display:flex;gap:10px;align-items:center">
-    <a class="nav-cta" href="download.html">Downloads</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+  <div class="mobile-menu" id="navMenu" hidden>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="download.html">Downloads</a></li>
+    </ul>
   </div>
-</div></nav>
+</header>
 
 <main id="main">
-<header class="hero"><div class="container">
-  <span class="eyebrow">Engineered for What's Next.</span>
-  <h1>Digital solutions that help your <span>business grow.</span></h1>
-  <p class="lead">We build professional websites, custom software and complete business management systems — plus design, marketing and ongoing support. Simple process, clear pricing, reliable service.</p>
-  <div class="hero-actions">
-    <a class="btn btn-primary" href="download.html">View Downloads</a>
-    <a class="btn" href="about.html">Learn About Us</a>
-  </div>
-  <div class="hero-points">
-    <div class="hp">For shops, offices & organizations</div>
-    <div class="hp">Clear pricing, on-time delivery</div>
-    <div class="hp">Support after launch</div>
-  </div>
-</div></header>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <p class="hero-label">Engineered for What's Next.</p>
+      <div class="logo-orb">
+        <span class="logo-ring" aria-hidden="true"></span>
+        <span class="logo-glow" aria-hidden="true"></span>
+        <span class="logo-card"><img src="assets/img/logo.png" alt="VELTRION logo" width="120" height="120"></span>
+      </div>
+      <h1>VELTRION</h1>
+      <p class="hero-tagline">We build professional websites, custom software and complete business management systems — plus design, marketing and ongoing support. Simple process, clear pricing, reliable service.</p>
+      <p class="hero-sub">Software &amp; Digital Technology · For shops, offices &amp; organizations</p>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+  </section>
 
-<div class="marquee" aria-hidden="true"><div class="marquee-track">
-  <span>Websites <i>·</i> Custom Software <i>·</i> Business Systems <i>·</i> Design <i>·</i> Marketing <i>·</i> Support <i>·</i>&nbsp;</span>
-  <span>Websites <i>·</i> Custom Software <i>·</i> Business Systems <i>·</i> Design <i>·</i> Marketing <i>·</i> Support <i>·</i>&nbsp;</span>
-</div></div>
+  <!-- MARQUEE BAND (muted) -->
+  <div class="band" aria-hidden="true">
+    <div class="band-track">
+      <span class="band-seq"><span>Websites</span><i class="dot"></i><span>Custom Software</span><i class="dot"></i><span>Business Systems</span><i class="dot"></i><span>Design</span><i class="dot"></i><span>Marketing</span><i class="dot"></i><span>Support</span><i class="dot"></i></span>
+      <span class="band-seq"><span>Websites</span><i class="dot"></i><span>Custom Software</span><i class="dot"></i><span>Business Systems</span><i class="dot"></i><span>Design</span><i class="dot"></i><span>Marketing</span><i class="dot"></i><span>Support</span><i class="dot"></i></span>
+    </div>
+  </div>
 
-<section><div class="container">
-  <div class="sec-head">
-    <div class="kicker">Our services</div>
-    <h2>Everything your business needs to go digital</h2>
-    <p>Whether you are starting fresh or improving your current setup, we have a practical solution for you.</p>
-  </div>
-  <div class="srows">
-    <div class="srow"><div class="num">01</div><div class="srow-t">Business Websites</div><p>Professional websites that build trust and bring enquiries.</p></div>
-    <div class="srow"><div class="num">02</div><div class="srow-t">Custom Software</div><p>Software made for your exact business needs.</p></div>
-    <div class="srow"><div class="num">03</div><div class="srow-t">Web Applications</div><p>Online booking, billing, customer portals and more.</p></div>
-    <div class="srow"><div class="num">04</div><div class="srow-t">Records & Database</div><p>Safe, organized records and easy reports.</p></div>
-    <div class="srow"><div class="num">05</div><div class="srow-t">Business Management System</div><p>Sales, stock, staff and accounts in one place.</p></div>
-    <div class="srow"><div class="num">06</div><div class="srow-t">Design & Branding</div><p>Logo, graphics and clean, easy-to-use designs.</p></div>
-    <div class="srow"><div class="num">07</div><div class="srow-t">Marketing & Promotion</div><p>Get found on Google and social media.</p></div>
-    <div class="srow"><div class="num">08</div><div class="srow-t">Support & Hosting</div><p>We look after your website and software for you.</p></div>
-  </div>
-</div></section>
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="site-container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">What we do</p>
+        <h2>Services</h2>
+        <p>Eight practical services — from the first conversation to launch, and the support that keeps everything running.</p>
+      </div>
+      <div class="section-body">
+        <div class="grid-hairline cols-3" data-stagger>
+          <article class="cell" data-reveal>
+            <div class="cell-top">
+              <span class="cell-num">01</span>
+              <span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <h3>Business Websites</h3>
+            <p>Professional websites that build trust and bring enquiries.</p>
+            <div class="cell-tags"><span class="tag">Trust</span><span class="tag">Enquiries</span></div>
+          </article>
+          <article class="cell" data-reveal>
+            <div class="cell-top">
+              <span class="cell-num">02</span>
+              <span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <h3>Custom Software</h3>
+            <p>Software made for your exact business needs.</p>
+            <div class="cell-tags"><span class="tag">Exact fit</span><span class="tag">Business needs</span></div>
+          </article>
+          <article class="cell" data-reveal>
+            <div class="cell-top">
+              <span class="cell-num">03</span>
+              <span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <h3>Web Applications</h3>
+            <p>Online booking, billing, customer portals and more.</p>
+            <div class="cell-tags"><span class="tag">Booking</span><span class="tag">Billing</span><span class="tag">Portals</span></div>
+          </article>
+          <article class="cell" data-reveal>
+            <div class="cell-top">
+              <span class="cell-num">04</span>
+              <span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <h3>Records &amp; Database</h3>
+            <p>Safe, organized records and easy reports.</p>
+            <div class="cell-tags"><span class="tag">Safe records</span><span class="tag">Easy reports</span></div>
+          </article>
+          <article class="cell" data-reveal>
+            <div class="cell-top">
+              <span class="cell-num">05</span>
+              <span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <h3>Business Management System</h3>
+            <p>Sales, stock, staff and accounts in one place.</p>
+            <div class="cell-tags"><span class="tag">Sales</span><span class="tag">Stock</span><span class="tag">Staff</span><span class="tag">Accounts</span></div>
+          </article>
+          <article class="cell" data-reveal>
+            <div class="cell-top">
+              <span class="cell-num">06</span>
+              <span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <h3>Design &amp; Branding</h3>
+            <p>Logo, graphics and clean, easy-to-use designs.</p>
+            <div class="cell-tags"><span class="tag">Logo</span><span class="tag">Graphics</span><span class="tag">Clean UI</span></div>
+          </article>
+          <article class="cell" data-reveal>
+            <div class="cell-top">
+              <span class="cell-num">07</span>
+              <span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <h3>Marketing &amp; Promotion</h3>
+            <p>Get found on Google and social media.</p>
+            <div class="cell-tags"><span class="tag">Google</span><span class="tag">Social media</span></div>
+          </article>
+          <article class="cell" data-reveal>
+            <div class="cell-top">
+              <span class="cell-num">08</span>
+              <span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <h3>Support &amp; Hosting</h3>
+            <p>We look after your website and software for you.</p>
+            <div class="cell-tags"><span class="tag">Updates</span><span class="tag">Backups</span><span class="tag">Help</span></div>
+          </article>
+          <article class="cell cell-accent" data-reveal>
+            <h3>Something custom?</h3>
+            <p>Tell us what your business needs — we shape a practical solution around it.</p>
+            <a class="btn-on-accent" href="#process">How we work
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section><div class="container">
-  <div class="sec-head"><div class="kicker">Why choose us</div><h2>A reliable partner, not just a seller</h2></div>
-  <div class="grid g3">
-    <div class="item"><div class="num">01</div><h3>Business-first approach</h3><p>We understand shops, offices and organizations — we suggest only what you need.</p></div>
-    <div class="item"><div class="num">02</div><h3>On-time delivery</h3><p>Clear timeline, regular updates, and training so your staff can use everything confidently.</p></div>
-    <div class="item"><div class="num">03</div><h3>Long-term care</h3><p>After launch we stay with you — updates, backups and help whenever needed.</p></div>
-  </div>
-</div></section>
+  <!-- EDITORIAL BREAK -->
+  <section class="editorial">
+    <div class="ed-line" aria-hidden="true"></div>
+    <div class="ed-shapes" aria-hidden="true">
+      <span class="ed-shape s1"></span>
+      <span class="ed-shape s2"></span>
+      <span class="ed-shape s3"></span>
+      <span class="ed-shape s4"></span>
+    </div>
+    <div class="site-container">
+      <div class="ed-body" data-reveal>
+        <p class="eyebrow-sm">( Our approach )</p>
+        <div style="margin-top:40px">
+          <h2 class="first">Most tools add steps.</h2>
+          <h2 class="second">We remove them.</h2>
+        </div>
+        <p class="lead">Clear scope, regular updates and hands-on training — practical digital products that are easy to use and dependable for modern organizations.</p>
+      </div>
+    </div>
+  </section>
 
-<section><div class="container">
-  <div class="sec-head"><div class="kicker">How it works</div><h2>Simple 4-step process</h2></div>
-  <div class="steps">
-    <div class="step"><div class="num">01</div><h3>Plan</h3><p>We understand your needs and agree a clear scope.</p></div>
-    <div class="step"><div class="num">02</div><h3>We design</h3><p>See a preview and request changes until you are happy.</p></div>
-    <div class="step"><div class="num">03</div><h3>We build & launch</h3><p>We develop, test and launch your website or system.</p></div>
-    <div class="step"><div class="num">04</div><h3>We support</h3><p>Training plus ongoing care and promotion.</p></div>
+  <!-- MARQUEE BAND (accent) -->
+  <div class="band accent" aria-hidden="true">
+    <div class="band-track">
+      <span class="band-seq"><span>VELTRION</span><i class="dot"></i><span>Engineered for What's Next</span><i class="dot"></i></span>
+      <span class="band-seq"><span>VELTRION</span><i class="dot"></i><span>Engineered for What's Next</span><i class="dot"></i></span>
+    </div>
   </div>
-</div></section>
+
+  <!-- PROCESS -->
+  <section class="section" id="process">
+    <div class="site-container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">How it works</p>
+        <h2>Process</h2>
+        <p>A simple four-step path from first conversation to launch and ongoing care.</p>
+      </div>
+      <div class="section-body">
+        <div class="grid-hairline cols-4" data-stagger>
+          <article class="cell" data-reveal>
+            <div class="cell-top"><span class="cell-num">01</span></div>
+            <h3>Plan</h3>
+            <p>We understand your needs and agree a clear scope.</p>
+          </article>
+          <article class="cell" data-reveal>
+            <div class="cell-top"><span class="cell-num">02</span></div>
+            <h3>We design</h3>
+            <p>See a preview and request changes until you are happy.</p>
+          </article>
+          <article class="cell" data-reveal>
+            <div class="cell-top"><span class="cell-num">03</span></div>
+            <h3>We build &amp; launch</h3>
+            <p>We develop, test and launch your website or system.</p>
+          </article>
+          <article class="cell" data-reveal>
+            <div class="cell-top"><span class="cell-num">04</span></div>
+            <h3>We support</h3>
+            <p>Training plus ongoing care and promotion.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY VELTRION -->
+  <section class="section" id="why">
+    <div class="site-container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Why choose us</p>
+        <h2>Why VELTRION</h2>
+        <p>A reliable partner, not just a seller.</p>
+      </div>
+      <div class="section-body" data-reveal>
+        <div class="pills">
+          <span class="pill">Precision</span>
+          <span class="pill">Reliability</span>
+          <span class="pill">Simplicity</span>
+          <span class="pill">Professionalism</span>
+        </div>
+        <p class="micro" style="margin-top:40px">What we bring</p>
+        <div class="stat-grid">
+          <div class="stat">
+            <p class="v">01</p>
+            <p class="l">Business-first approach</p>
+            <p class="d">We understand shops, offices and organizations — we suggest only what you need.</p>
+          </div>
+          <div class="stat">
+            <p class="v">02</p>
+            <p class="l">On-time delivery</p>
+            <p class="d">Clear timeline and regular updates throughout the project.</p>
+          </div>
+          <div class="stat span2">
+            <p class="v">03</p>
+            <p class="l">Long-term care</p>
+            <p class="d">After launch we stay with you — training, updates, backups and help whenever needed.</p>
+          </div>
+        </div>
+        <div class="accent-block">
+          <p class="big">Start here.</p>
+          <p class="sub">Simple process · Clear pricing · Reliable service</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="site-container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">FAQ</p>
+        <h2>Common Questions</h2>
+        <p>Our services, process, pricing approach and support — what to expect when working with VELTRION.</p>
+      </div>
+      <div class="section-body">
+        <div class="faq" data-stagger>
+          <div class="faq-item" data-reveal>
+            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a1">
+              What does VELTRION do?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-a" id="faq-a1" hidden><p>We build business websites, custom software, web applications, records and database systems, and business management systems — plus design, marketing and ongoing support.</p></div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a2">
+              How does your process work?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-a" id="faq-a2" hidden><p>Four simple steps: we plan the scope together, you review the design, we build and launch — and then we support you with training, updates and backups.</p></div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a3">
+              Do you provide support after launch?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-a" id="faq-a3" hidden><p>Yes. Support and hosting is one of our services — we look after your website and software, with updates, backups and help whenever you need it.</p></div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a4">
+              Who do you work with?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-a" id="faq-a4" hidden><p>Shops, offices, organizations and individuals — anyone who wants reliable, easy-to-use digital tools.</p></div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a5">
+              Is the pricing clear?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-a" id="faq-a5" hidden><p>Yes. We agree the scope and the price up front, keep you updated with regular progress, and deliver on time.</p></div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a6">
+              Where do I download official software?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-a" id="faq-a6" hidden><p>All official VELTRION releases are published on the Downloads page — including version, size and installation details. Please avoid downloading our software from other sites.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENCY-STYLE CTA PANEL -->
+  <section class="section">
+    <div class="site-container">
+      <div class="section-body" style="padding-top:0" data-reveal>
+        <div class="cta-panel">
+          <div class="cta-left">
+            <p class="eyebrow-sm">( Get started )</p>
+            <h2>Engineered for What's Next.</h2>
+            <p>Websites, software or a complete management system — tell us what your business needs and we shape a clear plan from there.</p>
+            <a class="btn-cta" href="download.html">View Downloads</a>
+          </div>
+          <div class="cta-right">
+            <p class="lbl">What you get</p>
+            <ul class="cta-list">
+              <li><span class="ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>Clear scope and pricing agreed up front</li>
+              <li><span class="ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>On-time delivery with regular updates</li>
+              <li><span class="ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>Training so your staff can use everything confidently</li>
+              <li><span class="ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span>Support after launch — updates and backups</li>
+            </ul>
+            <p class="cta-note">All software is published officially on our <b>Downloads</b> page — safe files, version and size listed for every release.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLITCH BAND -->
+  <div class="glitch" aria-hidden="true">
+    <div class="glitch-track">
+      <span data-word="VELTRION">VELTRION</span><i>·</i><span data-word="VELTRION">VELTRION</span><i>·</i><span data-word="VELTRION">VELTRION</span><i>·</i><span data-word="VELTRION">VELTRION</span><i>·</i>
+      <span data-word="VELTRION">VELTRION</span><i>·</i><span data-word="VELTRION">VELTRION</span><i>·</i><span data-word="VELTRION">VELTRION</span><i>·</i><span data-word="VELTRION">VELTRION</span><i>·</i>
+    </div>
+  </div>
+
+  <!-- CLOSER -->
+  <section class="section closer" id="start">
+    <div class="site-container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Next step</p>
+      </div>
+    </div>
+    <div class="closer-body" data-reveal>
+      <h2 data-split>Let's build.</h2>
+      <a class="btn btn-primary" href="download.html">View Downloads
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <p class="closer-sub">Software &amp; Digital Technology · Engineered for What's Next.</p>
+    </div>
+  </section>
 </main>
 
-<footer><div class="container foot">
-  <div class="foot-brand">
-    <span class="logo-box"><img src="assets/img/logo.png" alt="VELTRION logo" onerror="this.remove()">LOGO</span>
-    <b>VELTRION</b>
+<!-- Section side-nav -->
+<nav class="section-nav" id="sectionNav" aria-label="Section navigation">
+  <a href="#hero"><span class="line"></span><span class="txt"><span class="n">01</span><span class="nm">Home</span></span></a>
+  <a href="#services"><span class="line"></span><span class="txt"><span class="n">02</span><span class="nm">Services</span></span></a>
+  <a href="#process"><span class="line"></span><span class="txt"><span class="n">03</span><span class="nm">Process</span></span></a>
+  <a href="#why"><span class="line"></span><span class="txt"><span class="n">04</span><span class="nm">Why Us</span></span></a>
+  <a href="#faq"><span class="line"></span><span class="txt"><span class="n">05</span><span class="nm">FAQ</span></span></a>
+  <a href="#start"><span class="line"></span><span class="txt"><span class="n">06</span><span class="nm">Start</span></span></a>
+</nav>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+</button>
+
+<footer>
+  <div class="site-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-chip"><img src="assets/img/logo.png" alt="" onerror="this.remove()">LOGO</span>
+        <p class="name">VELTRION</p>
+        <p>Engineered for What's Next. Websites, software, business systems, design, marketing and support.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="download.html">Downloads</a></li>
+          <li><a href="about.html#team">Our Team</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li>Business Websites</li>
+          <li>Custom Software</li>
+          <li>Web Applications</li>
+          <li>Records &amp; Database</li>
+          <li>Business Management Systems</li>
+          <li>Design &amp; Branding</li>
+          <li>Marketing &amp; Promotion</li>
+          <li>Support &amp; Hosting</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year>2026</span> VELTRION. Software &amp; Digital Technology.</p>
+      <p><span class="sep">·</span> Engineered for What's Next.</p>
+    </div>
   </div>
-  <p>Engineered for What's Next. Websites, software, business systems, design, marketing and support.</p>
-  <nav class="foot-links" aria-label="Footer">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="download.html">Downloads</a>
-    <a href="about.html#team">Our Team</a>
-  </nav>
-</div>
-<div class="copy container"><span>© <span data-year>2026</span> VELTRION. All rights reserved.</span><span>Engineered for What's Next.</span></div></footer>
+</footer>
+
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>

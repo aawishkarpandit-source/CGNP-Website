@@ -247,7 +247,7 @@ export function initSite(): void {
     }, 320);
   }
 
-  // ---------- Downloads page: empty notice ----------
+  // ---------- Our Work page: empty notice ----------
   // If no .card elements exist inside #softwareList, show the empty notice.
   // To publish software later, add .card elements inside #softwareList.
   const list = $("#softwareList");

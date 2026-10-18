@@ -51,3 +51,11 @@ export function DownloadIcon() {
     </svg>
   );
 }
+
+export function Star() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2.5 L14.95 8.48 L21.55 9.44 L16.77 14.1 L17.9 20.68 L12 17.56 L6.1 20.68 L7.23 14.1 L2.45 9.44 L9.05 8.48 Z" />
+    </svg>
+  );
+}

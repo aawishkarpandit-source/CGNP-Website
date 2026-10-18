@@ -332,6 +332,7 @@ section[id]{scroll-margin-top:96px}
   border:1px solid var(--line-2);background:var(--line-2);overflow:hidden;
 }
 @media(min-width:768px){
+  .grid-hairline.cols-2{grid-template-columns:repeat(2,1fr)}
   .grid-hairline.cols-3{grid-template-columns:repeat(3,1fr)}
   .grid-hairline.cols-4{grid-template-columns:repeat(4,1fr)}
 }
@@ -369,6 +370,17 @@ section[id]{scroll-margin-top:96px}
   text-transform:uppercase;color:var(--t-500);transition:border-color .3s var(--ease),color .3s var(--ease);
 }
 .cell:hover .tag{border-color:var(--line-3);color:var(--silver)}
+
+/* ---------- Our Work: client cells ---------- */
+.stars{display:flex;align-items:center;gap:5px;margin-top:20px;color:var(--emerald)}
+.stars svg{flex:none}
+.cell .review{
+  margin-top:20px;padding-left:16px;border-left:2px solid var(--emerald);
+  color:var(--t-200);font-size:17px;line-height:1.6;max-width:34rem;
+}
+.cell .eyebrow-sm{margin-top:24px;color:var(--emerald)}
+.cell h3 a{transition:color .25s var(--ease)}
+.cell h3 a:hover{color:var(--emerald)}
 /* Emerald accent cell */
 .cell-accent{background:var(--emerald);justify-content:flex-end}
 .cell-accent::after{display:none}

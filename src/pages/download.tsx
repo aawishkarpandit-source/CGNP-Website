@@ -2,19 +2,66 @@
 import { boot } from "../runtime/boot.js";
 import { h } from "../runtime/jsx.js";
 import { Header, PageEffects, Footer, ToTop } from "../components/Layout.js";
-import { ArrowNE, DownloadIcon } from "../components/Icons.js";
-import { PAGE_NAV, COACH, DOWNLOAD_NOTES } from "../data/site.js";
+import { ArrowNE, DownloadIcon, Star } from "../components/Icons.js";
+import { PAGE_NAV, COACH, DOWNLOAD_NOTES, CLIENTS } from "../data/site.js";
 
 function PageHero() {
   return (
     <section class="page-hero">
       <div class="site-container">
-        <p class="eyebrow-sm">Downloads</p>
-        <h1>Our software downloads.</h1>
+        <p class="eyebrow-sm">Our Work</p>
+        <h1>Clients we've worked with.</h1>
         <p class="lead">
-          All official software from VELTRION will be published here. Please only download from this
-          page to stay safe.
+          Client projects with reviews and full tech details, plus official VELTRION software
+          downloads below.
         </p>
+      </div>
+    </section>
+  );
+}
+
+function ClientsSection() {
+  return (
+    <section class="section" id="clients">
+      <div class="site-container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">( Clients )</p>
+          <h2>Clients Served</h2>
+          <p>Reviews and the technology behind each project.</p>
+        </div>
+        <div class="section-body">
+          <div class="grid-hairline cols-2" data-stagger>
+            {CLIENTS.map((c) => (
+              <article class="cell card" data-reveal>
+                <div class="cell-top">
+                  <span class="cell-num">{c.num}</span>
+                  <span class="arrow" aria-hidden="true">
+                    <ArrowNE />
+                  </span>
+                </div>
+                <h3>
+                  <a href={c.url} target="_blank" rel="noopener noreferrer">
+                    {c.name}
+                  </a>
+                </h3>
+                <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                </div>
+                <p class="review">“{c.review}”</p>
+                <p class="eyebrow-sm">Tech</p>
+                <div class="cell-tags">
+                  {c.tech.map((t) => (
+                    <span class="tag">{t}</span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -89,6 +136,7 @@ export function DownloadPage() {
       <Header variant="sticky" nav={PAGE_NAV} menu={PAGE_NAV} />
       <main id="main">
         <PageHero />
+        <ClientsSection />
         <SoftwareSection />
       </main>
       <ToTop />

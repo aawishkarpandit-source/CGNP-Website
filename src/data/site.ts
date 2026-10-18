@@ -11,7 +11,7 @@ export const HERO_NAV: NavItem[] = [
   { href: "#services", label: "Services" },
   { href: "#process", label: "Process" },
   { href: "#faq", label: "FAQ" },
-  { href: "download.html", label: "Downloads" },
+  { href: "download.html", label: "Our Work" },
 ];
 
 export const HERO_MENU: NavItem[] = [
@@ -22,7 +22,7 @@ export const HERO_MENU: NavItem[] = [
 export const PAGE_NAV: NavItem[] = [
   { href: "index.html", label: "Home" },
   { href: "about.html", label: "About Us" },
-  { href: "download.html", label: "Downloads" },
+  { href: "download.html", label: "Our Work" },
 ];
 
 /* ---------- Home: section side rail ---------- */
@@ -93,7 +93,7 @@ export const FAQS: FaqItem[] = [
   { q: "Do you provide support after launch?", a: "Yes. Support and hosting is one of our services — we look after your website and software, with updates, backups and help whenever you need it." },
   { q: "Who do you work with?", a: "Shops, offices, organizations and individuals — anyone who wants reliable, easy-to-use digital tools." },
   { q: "Is the pricing clear?", a: "Yes. We agree the scope and the price up front, keep you updated with regular progress, and deliver on time." },
-  { q: "Where do I download official software?", a: "All official VELTRION releases are published on the Downloads page — including version, size and installation details. Please avoid downloading our software from other sites." },
+  { q: "Where do I download official software?", a: "All official VELTRION releases are published on Our Work — including version, size and installation details. Please avoid downloading our software from other sites." },
 ];
 
 /* ---------- CTA panel ---------- */
@@ -131,7 +131,33 @@ export const COMPANY_ROWS: TableRow[] = [
   { topic: "Who we serve", detail: "Businesses, organizations and individuals" },
 ];
 
-/* ---------- Downloads ---------- */
+/* ---------- Our Work: clients served ---------- */
+export type Client = {
+  num: string;
+  name: string;
+  url: string;
+  review: string;
+  tech: string[];
+};
+
+export const CLIENTS: Client[] = [
+  {
+    num: "01",
+    name: "Aabiskar Law Chamber",
+    url: "https://aabiskarlaw.com.np",
+    review: "Took our Law firm to the next level",
+    tech: ["TSX", "Admin Page", "Full Stack", "Language Services", "Domain"],
+  },
+  {
+    num: "02",
+    name: "Pharmanest",
+    url: "https://pharmanest.com.np",
+    review: "Affordable and Quality",
+    tech: ["TSX", "Admin Page", "Full Stack", "Ecommerce", "Domain"],
+  },
+];
+
+/* ---------- Downloads section (on the Our Work page) ---------- */
 export const COACH = {
   num: "01",
   name: "Coach Dashboard",
@@ -153,7 +179,7 @@ export const DOWNLOAD_NOTES = [
 export const FOOTER_NAV: NavItem[] = [
   { href: "index.html", label: "Home" },
   { href: "about.html", label: "About Us" },
-  { href: "download.html", label: "Downloads" },
+  { href: "download.html", label: "Our Work" },
   { href: "about.html#team", label: "Our Team" },
 ];
 

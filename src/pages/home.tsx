@@ -249,7 +249,7 @@ function CtaSection() {
                 Websites, software or a complete management system tell us what your business needs
                 and we shape a clear plan from there.
               </p>
-              <a class="btn-cta" href="download.html">View Downloads</a>
+              <a class="btn-cta" href="download.html">View Our Work</a>
             </div>
             <div class="cta-right">
               <p class="lbl">What you get</p>
@@ -264,7 +264,7 @@ function CtaSection() {
                 ))}
               </ul>
               <p class="cta-note">
-                All software is published officially on our <b>Downloads</b> page. Safe files,
+                All software is published officially on <b>Our Work</b>. Safe files,
                 version and size listed for every release.
               </p>
             </div>
@@ -299,7 +299,7 @@ function CloserSection() {
       <div class="closer-body" data-reveal>
         <h2 data-split>Let's build.</h2>
         <a class="btn btn-primary" href="download.html">
-          View Downloads
+          View Our Work
           <ArrowRight />
         </a>
         <p class="closer-sub">{"Software & Digital Technology · Engineered for What's Next."}</p>

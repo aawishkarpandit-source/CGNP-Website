@@ -49,7 +49,7 @@ export function Header(props: { variant: "hero" | "sticky"; nav: NavItem[]; menu
           ))}
         </nav>
         <div class="head-actions">
-          <a class="nav-pill" href="download.html">Downloads</a>
+          <a class="nav-pill" href="download.html">Our Work</a>
           <button class="menu-btn" id="hamburger" aria-expanded="false" aria-controls="navMenu">Menu</button>
         </div>
       </div>
@@ -108,7 +108,7 @@ export function Footer(props: { teamHref: string }) {
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
-              <li><a href="download.html">Downloads</a></li>
+              <li><a href="download.html">Our Work</a></li>
               <li><a href={props.teamHref}>Our Team</a></li>
             </ul>
           </nav>
